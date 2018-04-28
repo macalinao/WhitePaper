@@ -129,7 +129,7 @@ The debt order is comprised of the following fields:
 | `termsContract`           | `address`                 | Address of the Terms Contract Interface adherent smart contract that defines the repayment terms of the debt.                                                                                                                                                                                               |
 | `termsContractParameters` | `bytes32`                  | Data packet of parameters ingested by the Terms Contract to commit to specific values relevant to the repayment terms (e.g. principal, interest rate, etc.)                                                                                                                                                 |
 | `expirationTimestamp`                | `uint256`                 | Unix timestamp of the time at which this order will no longer be valid if unfilled.                             |                                                             
-| `salt`                | `uint`                 | A pseudo-random salt value used ot differentiate the hashes of debt orders with identical parameters.                                                     |
+| `salt`                | `uint`                 | A pseudo-random salt value used to differentiate the hashes of debt orders with identical parameters.                                                     |
 
 ### Debt Issuance Commitments
 
@@ -145,7 +145,7 @@ A sample schema for a debt issuance commitment follows:
 | `underwriterRiskRating`   | `uint32`                  | The underwriter's assessment of the average likelihood that any given unit-of-value the debtor is expected to pay will actually be repaid.  Must be a value between 0 and 1, encoded as an unsigned integer understood to have 9 decimal points (i.e. a 50% likelihood would be represented as `500000000`) |
 | `termsContract`           | `address`                 | Address of the Terms Contract Interface adherent smart contract that defines the repayment terms of the debt.                                                                                                                                                                                               |
 | `termsContractParameters` | `string`                  | Data packet of parameters ingested by the Terms Contract to commit to specific values relevant to the repayment terms (e.g. principal, interest rate, etc.)                                                                                                                                                 |
-| `salt`                | `uint`                 | A pseudo-random salt value used ot differentiate the hashes of debt orders with identical parameters.                                                     |
+| `salt`                | `uint`                 | A pseudo-random salt value used to differentiate the hashes of debt orders with identical parameters.                                                     |
 
 ### Debtor/Creditor Commitment Hash
 
